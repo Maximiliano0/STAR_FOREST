@@ -27,7 +27,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3550,0.004,0.291,10.89,1,Red Dwarf,Red,M
 3628,0.0055,0.393,10.48,1,Red Dwarf,Red,M
 26373,198000.0,39.0,-5.83,4,Supergiant,Blue,O
-4526,0.153,0.865,6.506,3,Main Sequence,Yellowish,K
+4526,0.153,0.865,6.506,3,Main Sequence,Yellow,K
 2890,0.0034,0.24,13.46,1,Red Dwarf,Red,M
 19920,0.00156,0.0142,11.34,2,White Dwarf,Blue,B
 2600,0.0003,0.102,18.7,0,Brown Dwarf,Red,M
@@ -37,8 +37,8 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 9030,45.0,2.63,1.45,3,Main Sequence,Blue White,A
 3500,138000.0,1420.0,-8.18,5,Hypergiant,Red,M
 3834,272000.0,1183.0,-9.2,5,Hypergiant,Red,M
-7100,0.00029,0.012,14.09,2,White Dwarf,White Yellow,F
-5587,0.819,0.99,5.03,3,Main Sequence,Yellowish White,F
+7100,0.00029,0.012,14.09,2,White Dwarf,Yellow,F
+5587,0.819,0.99,5.03,3,Main Sequence,Yellow,F
 12098,689.0,7.01,0.02,3,Main Sequence,Blue White,A
 26140,14520.0,5.49,-3.8,3,Main Sequence,Blue White,B
 3399,117000.0,1486.0,-10.92,5,Hypergiant,Red,M
@@ -47,11 +47,11 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3100,0.008,0.31,11.17,1,Red Dwarf,Red,M
 3574,200000.0,89.0,-5.24,4,Supergiant,Red,M
 18340,0.00134,0.0124,11.22,2,White Dwarf,Blue,B
-4526,0.153,0.865,6.506,3,Main Sequence,Yellowish,K
+4526,0.153,0.865,6.506,3,Main Sequence,Yellow,K
 17920,0.00111,0.0106,11.66,2,White Dwarf,Blue,B
 8500,0.0005,0.01,14.5,2,White Dwarf,White,A
 15276,1136.0,7.2,-1.97,3,Main Sequence,Blue White,B
-5800,0.81,0.9,5.05,3,Main Sequence,Yellowish White,F
+5800,0.81,0.9,5.05,3,Main Sequence,Yellow,F
 3342,0.0015,0.307,11.87,1,Red Dwarf,Red,M
 2871,0.00072,0.12,19.43,0,Brown Dwarf,Red,M
 7282,131000.0,24.0,-7.22,4,Supergiant,Blue,O
@@ -63,7 +63,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3365,340000.0,23.0,-6.2,4,Supergiant,Red,M
 3750,283000.0,1260.0,-7.63,5,Hypergiant,Red,M
 3600,240000.0,1190.0,-7.89,5,Hypergiant,Red,M
-5936,1.357,1.106,4.46,3,Main Sequence,Yellowish White,F
+5936,1.357,1.106,4.46,3,Main Sequence,Yellow,F
 2935,0.00087,0.0932,16.88,0,Brown Dwarf,Red,M
 3542,0.0009,0.62,14.23,1,Red Dwarf,Red,M
 3625,184000.0,84.0,-6.74,4,Supergiant,Red,M
@@ -79,7 +79,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3511,0.00064,0.109,17.12,0,Brown Dwarf,Red,M
 3091,0.0081,0.24,11.43,1,Red Dwarf,Red,M
 3749,550000.0,1648.0,-8.05,5,Hypergiant,Orange,M
-7700,0.00011,0.0128,14.47,2,White Dwarf,Yellowish White,F
+7700,0.00011,0.0128,14.47,2,White Dwarf,Yellow,F
 3605,126000.0,1124.0,-10.81,5,Hypergiant,Red,M
 3212,0.0016,0.378,12.854,1,Red Dwarf,Red,M
 11567,251000.0,36.0,-6.245,4,Supergiant,Blue,O
@@ -97,7 +97,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 2700,0.00018,0.13,16.05,0,Brown Dwarf,Red,M
 21020,0.0015,0.0112,11.52,2,White Dwarf,Blue,B
 3598,0.0011,0.56,14.26,1,Red Dwarf,Red,M
-7100,0.00029,0.012,14.09,2,White Dwarf,White Yellow,F
+7100,0.00029,0.012,14.09,2,White Dwarf,Yellow,F
 3625,184000.0,84.0,-6.74,4,Supergiant,Red,M
 25070,14500.0,5.92,-3.98,3,Main Sequence,Blue White,B
 7740,0.00049,0.01234,14.02,2,White Dwarf,White,A
@@ -116,7 +116,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3575,123000.0,45.0,-6.78,4,Supergiant,Red,M
 2935,0.00014,0.116,18.89,0,Brown Dwarf,Red,M
 2650,0.00069,0.11,17.45,0,Brown Dwarf,Red,M
-6380,1.35,0.98,2.93,3,Main Sequence,Yellowish White,F
+6380,1.35,0.98,2.93,3,Main Sequence,Yellow,F
 3660,363000.0,1673.0,-11.92,5,Hypergiant,Red,M
 33421,352000.0,67.0,-5.79,4,Supergiant,Blue,O
 3218,0.00054,0.11,20.02,0,Brown Dwarf,Red,M
@@ -135,7 +135,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 17383,342900.0,30.0,-6.09,4,Supergiant,Blue,O
 2989,0.0087,0.34,13.12,1,Red Dwarf,Red,M
 3150,0.0088,0.35,11.94,1,Red Dwarf,Red,M
-5587,0.819,0.99,5.03,3,Main Sequence,Yellowish White,F
+5587,0.819,0.99,5.03,3,Main Sequence,Yellow,F
 2989,0.0087,0.34,13.12,1,Red Dwarf,Red,M
 15276,1136.0,7.2,-1.97,3,Main Sequence,Blue White,B
 2914,0.000631,0.116,18.39,0,Brown Dwarf,Red,M
@@ -163,7 +163,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 2935,0.00014,0.116,18.89,0,Brown Dwarf,Red,M
 24020,0.00159,0.0127,10.55,2,White Dwarf,Blue,B
 16790,0.0014,0.0121,12.87,2,White Dwarf,Blue,B
-7700,0.00011,0.0128,14.47,2,White Dwarf,Yellowish White,F
+7700,0.00011,0.0128,14.47,2,White Dwarf,Yellow,F
 3834,272000.0,1183.0,-9.2,5,Hypergiant,Red,M
 3750,283000.0,1260.0,-7.63,5,Hypergiant,Red,M
 7220,0.00017,0.011,14.23,2,White Dwarf,White,F
@@ -195,7 +195,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3570,320000.0,1480.0,-7.58,5,Hypergiant,Red,M
 3450,174000.0,1284.0,-11.28,5,Hypergiant,Red,M
 3459,100000.0,1289.0,-10.7,5,Hypergiant,Red,M
-4077,0.085,0.795,6.228,3,Main Sequence,Yellowish,K
+4077,0.085,0.795,6.228,3,Main Sequence,Yellow,K
 2994,0.0072,0.28,13.45,1,Red Dwarf,Red,M
 23095,347820.0,86.0,-5.905,4,Supergiant,Blue,O
 11000,170000.0,1779.0,-9.9,5,Hypergiant,Blue White,B
@@ -209,15 +209,15 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 28700,16790.0,6.4,-4.09,3,Main Sequence,Blue White,B
 16790,0.0014,0.0121,12.87,2,White Dwarf,Blue,B
 3570,320000.0,1480.0,-7.58,5,Hypergiant,Red,M
-7100,0.00029,0.012,14.09,2,White Dwarf,White Yellow,F
+7100,0.00029,0.012,14.09,2,White Dwarf,Yellow,F
 3610,132000.0,1522.0,-10.86,5,Hypergiant,Red,M
 9700,74.0,2.89,0.16,3,Main Sequence,White,B
 3614,145000.0,1553.0,-7.71,5,Hypergiant,Red,M
 3225,0.00076,0.121,19.63,0,Brown Dwarf,Red,M
 3570,320000.0,1480.0,-7.58,5,Hypergiant,Red,M
 3541,0.0013,0.256,14.33,1,Red Dwarf,Red,M
-7100,0.00029,0.012,14.09,2,White Dwarf,White Yellow,F
+7100,0.00029,0.012,14.09,2,White Dwarf,Yellow,F
 2861,0.00019,0.0899,16.71,0,Brown Dwarf,Red,M
 16790,0.0014,0.0121,12.87,2,White Dwarf,Blue,B
 3200,195000.0,17.0,-7.22,4,Supergiant,Red,M
-11790,0.00015,0.011,12.59,2,White Dwarf,Yellowish White,F
+11790,0.00015,0.011,12.59,2,White Dwarf,Yellow,F

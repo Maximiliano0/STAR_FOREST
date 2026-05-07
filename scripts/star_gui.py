@@ -11,6 +11,10 @@ from tkinter import messagebox
 
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_tkagg import (
+    FigureCanvasTkAgg, NavigationToolbar2Tk
+)
 from PIL import Image, ImageTk
 from sklearn.tree import plot_tree
 
@@ -157,7 +161,7 @@ class StarApp:
         # Convert name to lowercase and replace spaces with underscores
         # Example: "White Dwarf" -> "white_dwarf.png"
         filename = f"{star_name.lower().replace(' ', '_')}.png"
-        base_dir = os.path.dirname(os.path.abspath(__file__))
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         img_path = os.path.join(base_dir, "pictures", filename)
 
         if os.path.exists(img_path):
@@ -176,7 +180,23 @@ class StarApp:
             print(f"Looking in: {img_path}")
 
     def show_logic(self):
-        """Display the decision tree model logic."""
+        """Display the decision tree in a zoomable Toplevel window.
+
+        The figure is embedded in a Tk canvas with matplotlib's navigation
+        toolbar, so the user can pan, zoom (rectangle and scroll-wheel) and
+        save the rendered tree.
+        """
+        win = tk.Toplevel(self.root)
+        win.title("Decision Tree Logic")
+        win.geometry("1100x750")
+
+        fig = Figure(figsize=(14, 9), dpi=100)
+        ax = fig.add_subplot(111)
+
+        # Attach the Tk canvas BEFORE calling plot_tree so sklearn can use the
+        # canvas renderer to lay out the tree text.
+        canvas = FigureCanvasTkAgg(fig, master=win)
+
         plot_tree(
             model,
             feature_names=x_features.tolist(),
@@ -184,9 +204,38 @@ class StarApp:
                 "Brown Dwarf", "Red Dwarf", "White Dwarf",
                 "Main Sequence", "Supergiant", "Hypergiant"
             ],
-            filled=True, rounded=True
+            filled=True, rounded=True, ax=ax
         )
-        plt.show()
+        fig.tight_layout()
+        canvas.draw()
+
+        toolbar = NavigationToolbar2Tk(canvas, win)
+        toolbar.update()
+        toolbar.pack(side="top", fill="x")
+        canvas.get_tk_widget().pack(side="top", fill="both", expand=True)
+
+        # Mouse-wheel zoom centered at the cursor.
+        def _on_scroll(event):
+            if event.inaxes is None:
+                return
+            scale = 1 / 1.2 if event.button == "up" else 1.2
+            cur_xlim = event.inaxes.get_xlim()
+            cur_ylim = event.inaxes.get_ylim()
+            xdata, ydata = event.xdata, event.ydata
+            new_w = (cur_xlim[1] - cur_xlim[0]) * scale
+            new_h = (cur_ylim[1] - cur_ylim[0]) * scale
+            relx = (cur_xlim[1] - xdata) / (cur_xlim[1] - cur_xlim[0])
+            rely = (cur_ylim[1] - ydata) / (cur_ylim[1] - cur_ylim[0])
+            event.inaxes.set_xlim(
+                [xdata - new_w * (1 - relx), xdata + new_w * relx]
+            )
+            event.inaxes.set_ylim(
+                [ydata - new_h * (1 - rely), ydata + new_h * rely]
+            )
+            canvas.draw_idle()
+
+        canvas.mpl_connect("scroll_event", _on_scroll)
+        win.protocol("WM_DELETE_WINDOW", lambda: (plt.close(fig), win.destroy()))
 
 # Run the Application
 if __name__ == "__main__":

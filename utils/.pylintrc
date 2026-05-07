@@ -5,6 +5,9 @@ max-line-length=120
 # Files or directories to be skipped
 ignore=.venv,venv,build,dist,__pycache__,.git
 
+# Allow sibling imports inside scripts/ (e.g. `from model_train import ...`)
+init-hook='import sys, os; sys.path.insert(0, os.path.abspath("scripts"))'
+
 [MESSAGES CONTROL]
 # Disable specific warnings appropriate for ML projects
 disable=

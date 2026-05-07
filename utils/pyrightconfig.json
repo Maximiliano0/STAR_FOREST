@@ -1,6 +1,9 @@
 {
   "include": [
-    "*.py"
+    "../scripts"
+  ],
+  "extraPaths": [
+    "../scripts"
   ],
   "exclude": [
     "**/node_modules",
@@ -12,7 +15,7 @@
     "**/build",
     "**/dist"
   ],
-  "venvPath": ".",
+  "venvPath": "..",
   "venv": ".venv",
   "pythonVersion": "3.12",
   "pythonPlatform": "Windows",

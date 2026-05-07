@@ -23,7 +23,7 @@ from eda_pipeline import prepare_dataset_for_model
 from config import STAR_TYPES
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MODELS_DIR = os.path.join(BASE_DIR, "models")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 MODEL_PATH = os.path.join(MODELS_DIR, "star_classifier.pkl")
@@ -167,18 +167,21 @@ def save_accuracy_summary_plot(accuracy, conf_matrix) -> str:
     return out_path
 
 
-def train_and_save_model(use_balanced: bool = False) -> Dict[str, str]:
+def train_and_save_model(use_balanced: bool = True) -> Dict[str, str]:
     """
     Trains the DecisionTreeClassifier model and saves all artifacts.
 
-    Uses the CLEANED dataset by default. The cleaned dataset has wording issues
-    fixed and is ready for model training without additional preprocessing.
+    Uses the cleaned + (conditionally) balanced dataset produced by the EDA
+    pipeline. Both training and testing are performed on this dataset, with a
+    stratified split to keep per-class proportions in both partitions.
 
     Parameters:
     -----------
     use_balanced : bool
-        If True, uses oversampled dataset. If False, uses clean dataset (default).
-        Oversampling is applied during EDA pipeline only if needed for class balance.
+        If True (default), uses the cleaned + oversampled dataset. Oversampling
+        is only applied by the EDA pipeline when the cleaned dataset is
+        actually imbalanced; otherwise the dataset is returned unchanged.
+        If False, uses only the cleaned (non-oversampled) dataset.
 
     Returns:
     --------
@@ -187,9 +190,8 @@ def train_and_save_model(use_balanced: bool = False) -> Dict[str, str]:
 
     os.makedirs(MODELS_DIR, exist_ok=True)
 
-    # Load cleaned data from EDA pipeline
-    # Note: prepare_dataset_for_model(use_balanced=False) returns the CLEAN dataset
-    # with wording issues fixed, ready for training
+    # Load the cleaned (and, if needed, oversampled) dataset from EDA pipeline.
+    # Both train and test partitions come from this same balanced dataset.
     df = prepare_dataset_for_model(use_balanced=use_balanced)
 
     # Feature engineering
@@ -211,9 +213,9 @@ def train_and_save_model(use_balanced: bool = False) -> Dict[str, str]:
     x['Spectral Class'] = le_spectral.fit_transform(
         x['Spectral Class'].astype(str))
 
-    # Train/Test split
+    # Train/Test split (stratified to preserve per-class proportions)
     x_train, x_test, y_train, y_test = train_test_split(  # pylint: disable=invalid-name
-        x, y, test_size=0.2, random_state=42
+        x, y, test_size=0.2, random_state=42, stratify=y
     )
 
     # Train DecisionTreeClassifier
@@ -305,4 +307,4 @@ def load_model() -> Tuple:
 
 
 if __name__ == "__main__":
-    train_and_save_model(use_balanced=False)
+    train_and_save_model(use_balanced=True)

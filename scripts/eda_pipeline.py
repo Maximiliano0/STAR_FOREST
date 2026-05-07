@@ -18,7 +18,7 @@ from sklearn.utils import resample
 
 
 DATA_URL = "https://raw.githubusercontent.com/YBIFoundation/Dataset/main/Stars.csv"
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 RAW_DATA_PATH = os.path.join(DATA_DIR, "Stars.csv")
@@ -64,10 +64,14 @@ COLOR_NORMALIZATION_MAP = {
     "whitish": "White",
     "white": "White",
     "whity": "White",
-    "yellowish": "Yellowish",
-    "yellowish white": "Yellowish White",
-    "yellowwhite": "Yellowish White",
-    "yellow-white": "Yellowish White",
+    "yellowish": "Yellow",
+    "yellowish white": "Yellow",
+    "yellowwhite": "Yellow",
+    "yellow-white": "Yellow",
+    "yellow": "Yellow",
+    "white yellow": "Yellow",
+    "white-yellow": "Yellow",
+    "whiteyellow": "Yellow",
     "orange": "Orange",
     "orange-red": "Orange-Red",
     "orangered": "Orange-Red",
@@ -245,8 +249,9 @@ def remove_invalid_domain_values(
             working[col] = pd.to_numeric(working[col], errors="coerce")
 
     nan_mask = working[NUMERIC_FEATURES].isna().any(axis=1)
-    if nan_mask.any():
-        summary_rows.append({"rule": "NaN in numeric features", "removed": int(nan_mask.sum())})
+    nan_count = int(nan_mask.sum())  # type: ignore[union-attr]
+    if nan_count:
+        summary_rows.append({"rule": "NaN in numeric features", "removed": nan_count})
     working = working.loc[~nan_mask].copy()
 
     for col, (low, high) in DOMAIN_RANGES.items():
@@ -325,7 +330,7 @@ def remove_outliers_iqr(
             n_out = int(outliers.sum())
             if n_out > 0:
                 summary_rows.append({
-                    "Star type": int(class_id),
+                    "Star type": int(class_id),  # type: ignore[arg-type]
                     "feature": col,
                     "removed": n_out,
                 })

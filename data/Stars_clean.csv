@@ -19,18 +19,18 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 7740,0.00049,0.01234,14.02,2,White Dwarf,White,A
 7220,0.00017,0.011,14.23,2,White Dwarf,White,F
 8500,0.0005,0.01,14.5,2,White Dwarf,White,A
-7700,0.00011,0.0128,14.47,2,White Dwarf,Yellowish White,F
-11790,0.00015,0.011,12.59,2,White Dwarf,Yellowish White,F
+7700,0.00011,0.0128,14.47,2,White Dwarf,Yellow,F
+11790,0.00015,0.011,12.59,2,White Dwarf,Yellow,F
 7230,8e-05,0.013,14.08,2,White Dwarf,Pale yellow orange,F
 30000,28840.0,6.3,-4.2,3,Main Sequence,Blue White,B
 15276,1136.0,7.2,-1.97,3,Main Sequence,Blue White,B
 9700,74.0,2.89,0.16,3,Main Sequence,White,B
-5800,0.81,0.9,5.05,3,Main Sequence,Yellowish White,F
+5800,0.81,0.9,5.05,3,Main Sequence,Yellow,F
 8052,8.7,1.8,2.42,3,Main Sequence,White,A
-6757,1.43,1.12,2.41,3,Main Sequence,Yellowish White,F
-6380,1.35,0.98,2.93,3,Main Sequence,Yellowish White,F
-5936,1.357,1.106,4.46,3,Main Sequence,Yellowish White,F
-5587,0.819,0.99,5.03,3,Main Sequence,Yellowish White,F
+6757,1.43,1.12,2.41,3,Main Sequence,Yellow,F
+6380,1.35,0.98,2.93,3,Main Sequence,Yellow,F
+5936,1.357,1.106,4.46,3,Main Sequence,Yellow,F
+5587,0.819,0.99,5.03,3,Main Sequence,Yellow,F
 3826,200000.0,19.0,-6.93,4,Supergiant,Red,M
 3365,340000.0,23.0,-6.2,4,Supergiant,Red,M
 3270,150000.0,88.0,-6.02,4,Supergiant,Red,M
@@ -67,18 +67,18 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 3342,0.0015,0.307,11.87,1,Red Dwarf,Red,M
 2621,0.0006,0.098,12.81,1,Red Dwarf,Red,M
 3158,0.00135,0.161,13.98,1,Red Dwarf,Red,M
-7100,0.00029,0.012,14.09,2,White Dwarf,White Yellow,F
+7100,0.00029,0.012,14.09,2,White Dwarf,Yellow,F
 17200,0.00098,0.015,12.45,2,White Dwarf,Blue White,B
 9675,0.00045,0.0109,13.98,2,White Dwarf,Blue White,A
 19860,0.0011,0.0131,11.34,2,White Dwarf,Blue,B
-5300,0.59,0.91,5.49,3,Main Sequence,Yellowish White,F
-4526,0.153,0.865,6.506,3,Main Sequence,Yellowish,K
-4077,0.085,0.795,6.228,3,Main Sequence,Yellowish,K
-4980,0.357,1.13,4.78,3,Main Sequence,Yellowish,K
+5300,0.59,0.91,5.49,3,Main Sequence,Yellow,F
+4526,0.153,0.865,6.506,3,Main Sequence,Yellow,K
+4077,0.085,0.795,6.228,3,Main Sequence,Yellow,K
+4980,0.357,1.13,4.78,3,Main Sequence,Yellow,K
 9030,45.0,2.63,1.45,3,Main Sequence,Blue White,A
 11250,672.0,6.98,-2.3,3,Main Sequence,Blue White,A
 5112,0.63,0.876,4.68,3,Main Sequence,Orange-Red,K
-7720,7.92,1.34,2.44,3,Main Sequence,Yellowish White,F
+7720,7.92,1.34,2.44,3,Main Sequence,Yellow,F
 12098,689.0,7.01,0.02,3,Main Sequence,Blue White,A
 33300,240000.0,12.0,-6.5,4,Supergiant,Blue,B
 23000,127000.0,36.0,-5.76,4,Supergiant,Blue,O
@@ -181,7 +181,7 @@ Temperature (K),Luminosity (L/Lo),Radius (R/Ro),Absolute magnitude (Mv),Star typ
 9320,29.0,1.91,1.236,3,Main Sequence,Blue White,A
 19400,10920.0,6.03,-3.08,3,Main Sequence,Blue White,B
 17140,883.0,5.653,-2.64,3,Main Sequence,Blue White,B
-8250,9.25,1.93,-0.98,3,Main Sequence,Yellowish White,F
+8250,9.25,1.93,-0.98,3,Main Sequence,Yellow,F
 23678,244290.0,35.0,-6.27,4,Supergiant,Blue,O
 12749,332520.0,76.0,-7.02,4,Supergiant,Blue,O
 9383,342940.0,98.0,-6.98,4,Supergiant,Blue,O
