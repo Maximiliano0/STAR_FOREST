@@ -1,0 +1,41 @@
+[MASTER]
+# Maximum line length
+max-line-length=120
+
+# Files or directories to be skipped
+ignore=.venv,venv,build,dist,__pycache__,.git
+
+[MESSAGES CONTROL]
+# Disable specific warnings appropriate for ML projects
+disable=
+    invalid-name,           # X, y, x_train, etc. are standard ML naming
+    too-many-locals,        # Common in training functions
+    too-many-arguments,
+    too-many-instance-attributes,
+    duplicate-code,         # Feature column lists will repeat
+    broad-exception-caught, # Acceptable in GUI error handlers
+    fixme,
+    line-too-long,          # Handled by max-line-length above
+    missing-module-docstring,
+    too-few-public-methods
+
+[FORMAT]
+max-line-length=120
+indent-string='    '
+
+[DESIGN]
+max-locals=25
+max-args=10
+max-attributes=15
+
+[BASIC]
+# Allow short variable names common in ML/data science
+good-names=i,j,k,x,y,X,df,fn,fp,tn,tp,_,ax,fig,le,cm,id
+
+[REPORTS]
+output-format=text
+reports=no
+score=yes
+
+[REFACTORING]
+max-nested-blocks=5
